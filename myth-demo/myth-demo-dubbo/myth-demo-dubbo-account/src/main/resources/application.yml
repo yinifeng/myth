@@ -6,9 +6,9 @@ server:
 spring:
     datasource:
         driver-class-name:  com.mysql.jdbc.Driver
-        url: jdbc:mysql://10.4.4.202:3306/myth_account?useUnicode=true&characterEncoding=utf8
+        url: jdbc:mysql://192.168.1.98:3306/myth_account?useUnicode=true&characterEncoding=utf8
         username: root
-        password: 123123
+        password: 123456
     #activemq:
     #   broker-url: tcp://120.76.52.162:61616
     #   user: happylife
@@ -41,7 +41,7 @@ spring:
       #     value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
 
 mybatis:
-  type-aliases-package: com.github.myth.demo.dubbo.account.api.entity
+  type-aliases-package: org.dromara.myth.demo.dubbo.account.api.entity
   config-location: classpath:mybatis/mybatis-config.xml
 
 logging:
@@ -49,9 +49,9 @@ logging:
         root: error
         org.springframework.web: info
         org.apache.ibatis: info
-        com.github.myth.bonuspoint: info
-        com.github.myth.lottery: debug
-        com.github.myth: debug
+        org.dromara.myth.bonuspoint: info
+        org.dromara.myth.lottery: debug
+        org.dromara.myth: debug
         io.netty: info
 
     path: "./logs"
